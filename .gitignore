@@ -1,0 +1,44 @@
+# Credit to thomasrussellmurphy for the list of file types.
+
+# keep
+
+# *.vhd
+# *.v
+# *.sdc
+
+# ignore Quartus files
+*_generation_script*
+*_inst.vhd
+*.sof
+*.pof
+*.bak
+*.cmp
+*.done
+*.eqn
+*.hex
+*.html
+*.jdi
+*.jpg
+*.mif
+*.pin
+*.pof
+*.ptf.*
+*.qar
+*.qarlog
+*.qws
+*.rpt
+*.smsg
+*.sof
+*.sopc_builder
+*.summary
+*.tcl
+*example*
+*sopc_*
+
+# ignore Quartus folders
+*/db/
+*/incremental_db/
+*/simulation/
+*/timing/
+*/testbench/
+*/*_sim/
