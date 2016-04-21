@@ -1,0 +1,23 @@
+Application Notes
+
+Cofiguration Schemes                                -> cfg_cf51001.pdf 
+    Our device uses AS or Active Serial
+Cyclone IV Specs                                    -> cyiv-51001.pdf
+Flash Specs                                         -> S25FL064P_00.pdf
+EPCS (same flash device)                            -> cyc_c51014.pdf
+Use Onboard Rom                                     -> ug_ram_rom.pdf
+
+DE0-NANO Device Notes
+FPGA -> EP4CE22F17C6N
+    - 594 Kbits embedded memory
+    - 66 18x18 multipliers
+    - 4 GP PLLs
+    - 153 Max IO pins
+
+Flash -> FL064
+    - 64Mbit
+
+EPCS64
+
+ISP means in system programming
+
