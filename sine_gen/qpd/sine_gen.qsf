@@ -67,6 +67,8 @@ set_location_assignment PIN_A7 -to val[1]
 set_location_assignment PIN_C6 -to val[0]
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VERILOG_FILE pll_leds_bb.v
+set_global_assignment -name QIP_FILE pll_leds.qip
 set_global_assignment -name QIP_FILE rom_1.qip
 set_global_assignment -name SYSTEMVERILOG_FILE ../scripts/sine_rom.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../src/sine_gen.sv
