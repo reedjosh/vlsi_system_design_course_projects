@@ -1,5 +1,5 @@
 |sine_gen
-clk => clk.IN1
+clk => clk.IN2
 reset => addr[0].ACLR
 reset => addr[1].ACLR
 reset => addr[2].ACLR
@@ -8,24 +8,156 @@ reset => addr[4].ACLR
 reset => addr[5].ACLR
 reset => addr[6].ACLR
 reset => addr[7].ACLR
-adc[0] << sine_rom:sine2.val
-adc[1] << sine_rom:sine2.val
-adc[2] << sine_rom:sine2.val
-adc[3] << sine_rom:sine2.val
-adc[4] << sine_rom:sine2.val
-adc[5] << sine_rom:sine2.val
-adc[6] << sine_rom:sine2.val
-adc[7] << sine_rom:sine2.val
+reset => sine_state[0].ENA
+reset => cnt_state[31].ENA
+reset => cnt_state[30].ENA
+reset => cnt_state[29].ENA
+reset => cnt_state[28].ENA
+reset => cnt_state[27].ENA
+reset => cnt_state[26].ENA
+reset => cnt_state[25].ENA
+reset => cnt_state[24].ENA
+reset => cnt_state[23].ENA
+reset => cnt_state[22].ENA
+reset => cnt_state[21].ENA
+reset => cnt_state[20].ENA
+reset => cnt_state[19].ENA
+reset => cnt_state[18].ENA
+reset => cnt_state[17].ENA
+reset => cnt_state[16].ENA
+reset => cnt_state[15].ENA
+reset => cnt_state[14].ENA
+reset => cnt_state[13].ENA
+reset => cnt_state[12].ENA
+reset => cnt_state[11].ENA
+reset => cnt_state[10].ENA
+reset => cnt_state[9].ENA
+reset => cnt_state[8].ENA
+reset => cnt_state[7].ENA
+reset => cnt_state[6].ENA
+reset => cnt_state[5].ENA
+reset => cnt_state[4].ENA
+reset => cnt_state[3].ENA
+reset => cnt_state[2].ENA
+reset => cnt_state[1].ENA
+reset => cnt_state[0].ENA
+reset => sine_state[31].ENA
+reset => sine_state[30].ENA
+reset => sine_state[29].ENA
+reset => sine_state[28].ENA
+reset => sine_state[27].ENA
+reset => sine_state[26].ENA
+reset => sine_state[25].ENA
+reset => sine_state[24].ENA
+reset => sine_state[23].ENA
+reset => sine_state[22].ENA
+reset => sine_state[21].ENA
+reset => sine_state[20].ENA
+reset => sine_state[19].ENA
+reset => sine_state[18].ENA
+reset => sine_state[17].ENA
+reset => sine_state[16].ENA
+reset => sine_state[15].ENA
+reset => sine_state[14].ENA
+reset => sine_state[13].ENA
+reset => sine_state[12].ENA
+reset => sine_state[11].ENA
+reset => sine_state[10].ENA
+reset => sine_state[9].ENA
+reset => sine_state[8].ENA
+reset => sine_state[7].ENA
+reset => sine_state[6].ENA
+reset => sine_state[5].ENA
+reset => sine_state[4].ENA
+reset => sine_state[3].ENA
+reset => sine_state[2].ENA
+reset => sine_state[1].ENA
+dac[0] << dac.DB_MAX_OUTPUT_PORT_TYPE
+dac[1] << dac.DB_MAX_OUTPUT_PORT_TYPE
+dac[2] << dac.DB_MAX_OUTPUT_PORT_TYPE
+dac[3] << dac.DB_MAX_OUTPUT_PORT_TYPE
+dac[4] << dac.DB_MAX_OUTPUT_PORT_TYPE
+dac[5] << dac.DB_MAX_OUTPUT_PORT_TYPE
+dac[6] << dac.DB_MAX_OUTPUT_PORT_TYPE
+dac[7] << dac.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|sine_gen|pll_leds:pll_leds_inst
-inclk0 => ~NO_FANOUT~
-c0 <= <GND>
-c1 <= <GND>
-c2 <= <GND>
+|sine_gen|pll_10_khz:pll_10_khz_inst
+inclk0 => sub_wire3[0].IN1
+c0 <= altpll:altpll_component.clk
 
 
-|sine_gen|sine_rom:sine2
+|sine_gen|pll_10_khz:pll_10_khz_inst|altpll:altpll_component
+inclk[0] => pll_10_khz_altpll:auto_generated.inclk[0]
+inclk[1] => pll_10_khz_altpll:auto_generated.inclk[1]
+fbin => ~NO_FANOUT~
+pllena => ~NO_FANOUT~
+clkswitch => ~NO_FANOUT~
+areset => ~NO_FANOUT~
+pfdena => ~NO_FANOUT~
+clkena[0] => ~NO_FANOUT~
+clkena[1] => ~NO_FANOUT~
+clkena[2] => ~NO_FANOUT~
+clkena[3] => ~NO_FANOUT~
+clkena[4] => ~NO_FANOUT~
+clkena[5] => ~NO_FANOUT~
+extclkena[0] => ~NO_FANOUT~
+extclkena[1] => ~NO_FANOUT~
+extclkena[2] => ~NO_FANOUT~
+extclkena[3] => ~NO_FANOUT~
+scanclk => ~NO_FANOUT~
+scanclkena => ~NO_FANOUT~
+scanaclr => ~NO_FANOUT~
+scanread => ~NO_FANOUT~
+scanwrite => ~NO_FANOUT~
+scandata => ~NO_FANOUT~
+phasecounterselect[0] => ~NO_FANOUT~
+phasecounterselect[1] => ~NO_FANOUT~
+phasecounterselect[2] => ~NO_FANOUT~
+phasecounterselect[3] => ~NO_FANOUT~
+phaseupdown => ~NO_FANOUT~
+phasestep => ~NO_FANOUT~
+configupdate => ~NO_FANOUT~
+fbmimicbidir <> <GND>
+clk[0] <= clk[0].DB_MAX_OUTPUT_PORT_TYPE
+clk[1] <= clk[1].DB_MAX_OUTPUT_PORT_TYPE
+clk[2] <= clk[2].DB_MAX_OUTPUT_PORT_TYPE
+clk[3] <= clk[3].DB_MAX_OUTPUT_PORT_TYPE
+clk[4] <= clk[4].DB_MAX_OUTPUT_PORT_TYPE
+extclk[0] <= <GND>
+extclk[1] <= <GND>
+extclk[2] <= <GND>
+extclk[3] <= <GND>
+clkbad[0] <= <GND>
+clkbad[1] <= <GND>
+enable1 <= <GND>
+enable0 <= <GND>
+activeclock <= <GND>
+clkloss <= <GND>
+locked <= <GND>
+scandataout <= <GND>
+scandone <= <GND>
+sclkout0 <= <GND>
+sclkout1 <= <GND>
+phasedone <= <GND>
+vcooverrange <= <GND>
+vcounderrange <= <GND>
+fbout <= <GND>
+fref <= <GND>
+icdrclk <= <GND>
+
+
+|sine_gen|pll_10_khz:pll_10_khz_inst|altpll:altpll_component|pll_10_khz_altpll:auto_generated
+clk[0] <= pll1.CLK
+clk[1] <= pll1.CLK1
+clk[2] <= pll1.CLK2
+clk[3] <= pll1.CLK3
+clk[4] <= pll1.CLK4
+inclk[0] => pll1.CLK
+inclk[1] => pll1.CLK1
+
+
+|sine_gen|sine_rom:sine
 clk => val[0]~reg0.CLK
 clk => val[1]~reg0.CLK
 clk => val[2]~reg0.CLK

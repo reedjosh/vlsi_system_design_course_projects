@@ -17,9 +17,9 @@ LEDs[4] <= seg_driver:disp.LEDs
 LEDs[5] <= seg_driver:disp.LEDs
 LEDs[6] <= seg_driver:disp.LEDs
 pwm <= <GND>
-sel[0] <= seg_driver:disp.sel
-sel[1] <= seg_driver:disp.sel
 sel[2] <= seg_driver:disp.sel
+sel[1] <= seg_driver:disp.sel
+sel[0] <= seg_driver:disp.sel
 
 
 |sev_seg|pll_leds:pll_leds_inst

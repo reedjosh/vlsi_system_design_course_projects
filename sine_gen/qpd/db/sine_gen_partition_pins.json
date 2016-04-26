@@ -2,7 +2,48 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "dac[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dac[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dac[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dac[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dac[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dac[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dac[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dac[7]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

@@ -64,14 +64,12 @@ print("module sine_rom( input  logic                clk,")
 print("                 input  logic unsigned [7:0] addr,")
 print("                 output logic unsigned [7:0] val );")
 print()
-print("    logic  unsigned [255:0] [7:0] data;")
-print()
 print("    always_ff @(posedge clk)")
 print("        case(addr)")
 
 # print case statement vals
 for idx, val in enumerate(vals):
-    print("            ", idx," : val <= ", val+int(max_data_val/2), ";", sep="")
+    print("                ", idx," : val <= ", val+int(max_data_val/2), ";", sep="")
 
 print("        endcase")
 print()

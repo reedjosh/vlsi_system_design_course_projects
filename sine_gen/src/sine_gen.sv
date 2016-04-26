@@ -2,58 +2,69 @@
 //=========================== sine_gen =====
 //==========================================
 module sine_gen( input  logic                clk, reset,
-                 output logic unsigned [7:0] adc );
+                 output logic unsigned [7:0] dac );
 
     logic unsigned [7:0] addr, val;
-    logic unsigned [1:0] cnt;
-    logic clk0;
-    logic clk1;
-    logic clk2;
+    enum {up, down} cnt_state, sine_state;
+    logic clk_10_khz;
 
-    pll_leds pll_leds_inst ( .inclk0 ( clk  ),
-        	                 .c0     ( clk0 ),
-        	                 .c1     ( clk1 ),
-        	                 .c2     ( clk2 ) );
+    pll_10_khz	pll_10_khz_inst (
+    	.inclk0 ( clk        ),
+    	.c0     ( clk_10_khz ) );
 
     assign adc = val;
 
-    always_ff @(posedge clk2, negedge reset) begin
+    always_ff @(posedge clk_10_khz, negedge reset) begin
         if (~reset) begin
             addr = 0;
-            //cnt <= 0;
             end
-        else addr <= addr + 1;
-          //  case(cnt) 
-          //      0 : begin
-          //          addr <= addr + 1;
-          //          end
-          //      1 : begin
-          //          addr <= addr + 1;
-          //          end
-          //      2 : begin
-          //          addr <= addr + 1;
-          //          end
-          //      3 : begin
-          //          addr <= addr + 1;
-          //          end
-          //  endcase
+        else begin
+            if      (addr == 254) cnt_state <= down;
+            else if (addr == 1)   cnt_state <= up;
+            case(sine_state)
+                up   : if (addr == 1 && cnt_state == down)   sine_state <= down;
+                down : if (addr == 1 && cnt_state == down) sine_state <= up;
+                endcase
+            case(cnt_state)
+                up :   addr <= addr+1;
+                down : addr <= addr-1;
+                endcase
+            end
         end
 
-//    clk_10_mhz	clk_10_mhz_inst (
-//    	.areset ( reset      ),
-//    	.inclk0 ( clk        ),
-//    	.c0     ( clk_10_mhz ) );
+    always_comb
+        case(sine_state)
+            up   : dac <= val;
+            down : dac <= 255-val;
+            endcase
 
-  //  rom_1 sine(
-  //  	.address ( addr ),
-  //  	.clock   ( clk  ),
-  //  	.q       ( val  ) );
-    
-    sine_rom sine2 (
+    sine_rom sine (
     	.addr ( addr ),
-    	.clk  ( clk2 ),
+    	.clk  ( clk  ),
     	.val  ( val  ) );
 
+    endmodule
 
 
-endmodule
+//module sine_gen_tb ( );
+//
+//    logic reset, clk;
+//
+//    initial begin
+//        clk = 0;
+//        reset = 0;
+//        #10;
+//        reset = 1;
+//        end
+//    
+//    always #5 clk = ~clk;
+//
+//    sine_gen uut (
+//        .clk   ( clk ),
+//        .reset ( reset ) );
+//
+//    endmodule
+
+    
+
+    

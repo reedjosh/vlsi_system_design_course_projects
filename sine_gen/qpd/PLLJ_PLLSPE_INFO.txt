@@ -1,4 +1,4 @@
-PLL_Name	clk_10_mhz:clk_10_mhz_inst|altpll:altpll_component|clk_10_mhz_altpll:auto_generated|pll1
+PLL_Name	pll_10_khz:pll_10_khz_inst|altpll:altpll_component|pll_10_khz_altpll:auto_generated|pll1
 PLLJITTER	30
 PLLSPEmax	84
 PLLSPEmin	-53
