@@ -1,4 +1,11 @@
 #!/usr/bin/python
+# FILE: sine_vals.py
+# Author: Joshua Reed
+# Description: Creats both a system verilog rom, and a sine memory initialization
+# file. Only one is needed to create a sine wave generator. I prefer the system
+# verilog file as it is less convoluted and easier to simulate with.
+# Both methods will synthesize to exactly the same thing.
+
 import pylab
 import math
 import sys

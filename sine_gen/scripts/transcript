@@ -1,0 +1,158 @@
+project open /home/josh/Documents/vsys/sine_gen/mpd/sine_gen
+# Loading project sine_gen
+# vlog -work work -sv -stats=none /home/josh/Documents/vsys/sine_gen/src/sine_gen.sv
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# -- Compiling module sine_gen
+# -- Compiling module sine_gen_tb
+# 
+# Top level modules:
+# 	sine_gen_tb
+# 
+# 
+# vlog -work work -sv -stats=none /home/josh/Documents/vsys/sine_gen/src/sine_rom.sv
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# -- Compiling module sine_rom
+# 
+# Top level modules:
+# 	sine_rom
+# 
+# 
+# vlog -work work -stats=none /home/josh/Documents/vsys/sine_gen/qpd/pll_10_khz.v
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# -- Compiling module pll_10_khz
+# 
+# Top level modules:
+# 	pll_10_khz
+# 
+# 
+# 3 compiles, 0 failed with no errors.
+vsim -L altera_mf_ver -L cycloneive_ver work.sine_gen_tb
+# vsim -L altera_mf_ver -L cycloneive_ver work.sine_gen_tb 
+# Start time: 13:43:19 on Apr 27,2016
+# Loading sv_std.std
+# Loading work.sine_gen_tb
+# Loading work.sine_gen
+# Loading work.pll_10_khz
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading work.sine_rom
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+# ** Warning: (vsim-3017) /home/josh/Documents/vsys/sine_gen/src/sine_gen.sv(63): [TFMPC] - Too few port connections. Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /sine_gen_tb/uut File: /home/josh/Documents/vsys/sine_gen/src/sine_gen.sv
+# ** Warning: (vsim-3722) /home/josh/Documents/vsys/sine_gen/src/sine_gen.sv(63): [TFMPC] - Missing connection for port 'dac'.
+add wave -position end sim:/sine_gen_tb/uut/*
+run
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# Warning : Input clock freq. is under VCO range. Cyclone IV E PLL may lose lock
+# Time: 15  Instance: sine_gen_tb.uut.pll_10_khz_inst.altpll_component.cycloneiii_pll.pll3
+vsim -L altera_mf_ver -L cycloneive_ver work.sine_gen_tb -t ps
+# End time: 13:43:59 on Apr 27,2016, Elapsed time: 0:00:40
+# Errors: 0, Warnings: 3
+# vsim -L altera_mf_ver -L cycloneive_ver work.sine_gen_tb -t ps 
+# Start time: 13:43:59 on Apr 27,2016
+# Loading sv_std.std
+# Loading work.sine_gen_tb
+# Loading work.sine_gen
+# Loading work.pll_10_khz
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading work.sine_rom
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+# ** Warning: (vsim-3017) /home/josh/Documents/vsys/sine_gen/src/sine_gen.sv(63): [TFMPC] - Too few port connections. Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /sine_gen_tb/uut File: /home/josh/Documents/vsys/sine_gen/src/sine_gen.sv
+# ** Warning: (vsim-3722) /home/josh/Documents/vsys/sine_gen/src/sine_gen.sv(63): [TFMPC] - Missing connection for port 'dac'.
+# invalid command name "1711"
+add wave -position end sim:/sine_gen_tb/uut/*
+run
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# Warning : Input clock freq. is under VCO range. Cyclone IV E PLL may lose lock
+# Time: 15  Instance: sine_gen_tb.uut.pll_10_khz_inst.altpll_component.cycloneiii_pll.pll3
+# invalid command name "1715"
+# vlog -work work -sv -stats=none /home/josh/Documents/vsys/sine_gen/src/sine_gen.sv
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# -- Compiling module sine_gen
+# -- Compiling module sine_gen_tb
+# 
+# Top level modules:
+# 	sine_gen_tb
+# 
+# 
+# vlog -work work -sv -stats=none /home/josh/Documents/vsys/sine_gen/src/sine_rom.sv
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# -- Compiling module sine_rom
+# 
+# Top level modules:
+# 	sine_rom
+# 
+# 
+# vlog -work work -stats=none /home/josh/Documents/vsys/sine_gen/qpd/pll_10_khz.v
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# -- Compiling module pll_10_khz
+# 
+# Top level modules:
+# 	pll_10_khz
+# 
+# 
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.sine_gen_tb
+# Loading work.sine_gen
+# Loading work.pll_10_khz
+# Loading work.sine_rom
+# ** Warning: (vsim-3017) /home/josh/Documents/vsys/sine_gen/src/sine_gen.sv(63): [TFMPC] - Too few port connections. Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /sine_gen_tb/uut File: /home/josh/Documents/vsys/sine_gen/src/sine_gen.sv
+# ** Warning: (vsim-3722) /home/josh/Documents/vsys/sine_gen/src/sine_gen.sv(63): [TFMPC] - Missing connection for port 'dac'.
+run
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 90000  Instance: sine_gen_tb.uut.pll_10_khz_inst.altpll_component.cycloneiii_pll.pll3
+run
+# invalid command name "1815"
+# vlog -work work -sv -stats=none /home/josh/Documents/vsys/sine_gen/src/sine_gen.sv
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# -- Compiling module sine_gen
+# -- Compiling module sine_gen_tb
+# 
+# Top level modules:
+# 	sine_gen_tb
+# 
+# 
+# vlog -work work -sv -stats=none /home/josh/Documents/vsys/sine_gen/src/sine_rom.sv
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# -- Compiling module sine_rom
+# 
+# Top level modules:
+# 	sine_rom
+# 
+# 
+# vlog -work work -stats=none /home/josh/Documents/vsys/sine_gen/qpd/pll_10_khz.v
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# -- Compiling module pll_10_khz
+# 
+# Top level modules:
+# 	pll_10_khz
+# 
+# 
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.sine_gen_tb
+# Loading work.sine_gen
+# Loading work.pll_10_khz
+# Loading work.sine_rom
+# ** Warning: (vsim-3017) /home/josh/Documents/vsys/sine_gen/src/sine_gen.sv(63): [TFMPC] - Too few port connections. Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /sine_gen_tb/uut File: /home/josh/Documents/vsys/sine_gen/src/sine_gen.sv
+# ** Warning: (vsim-3722) /home/josh/Documents/vsys/sine_gen/src/sine_gen.sv(63): [TFMPC] - Missing connection for port 'dac'.
+run
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 90000  Instance: sine_gen_tb.uut.pll_10_khz_inst.altpll_component.cycloneiii_pll.pll3
+# unknown option "-rowmargin"
+run
