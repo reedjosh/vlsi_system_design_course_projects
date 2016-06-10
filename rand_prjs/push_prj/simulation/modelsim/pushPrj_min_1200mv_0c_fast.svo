@@ -1,0 +1,610 @@
+// Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition"
+
+// DATE "04/15/2016 12:17:22"
+
+// 
+// Device: Altera EP4CE22F17C6 Package FBGA256
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (SystemVerilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module pushPrj (
+	buttons,
+	switch,
+	leds);
+input 	logic [7:0] buttons ;
+input 	logic switch ;
+output 	logic [7:0] leds ;
+
+// Design Ports Information
+// leds[0]	=>  Location: PIN_A15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// leds[1]	=>  Location: PIN_A13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// leds[2]	=>  Location: PIN_B13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// leds[3]	=>  Location: PIN_A11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// leds[4]	=>  Location: PIN_D1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// leds[5]	=>  Location: PIN_F3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// leds[6]	=>  Location: PIN_B1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// leds[7]	=>  Location: PIN_L3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// buttons[7]	=>  Location: PIN_B5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// switch	=>  Location: PIN_M1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// buttons[5]	=>  Location: PIN_B4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// buttons[0]	=>  Location: PIN_D3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// buttons[1]	=>  Location: PIN_C3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// buttons[2]	=>  Location: PIN_A2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// buttons[3]	=>  Location: PIN_A3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// buttons[6]	=>  Location: PIN_A4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// buttons[4]	=>  Location: PIN_B3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("pushPrj_min_1200mv_0c_v_fast.sdo");
+// synopsys translate_on
+
+wire \leds[0]~output_o ;
+wire \leds[1]~output_o ;
+wire \leds[2]~output_o ;
+wire \leds[3]~output_o ;
+wire \leds[4]~output_o ;
+wire \leds[5]~output_o ;
+wire \leds[6]~output_o ;
+wire \leds[7]~output_o ;
+wire \buttons[4]~input_o ;
+wire \buttons[7]~input_o ;
+wire \switch~input_o ;
+wire \leds~6_combout ;
+wire \buttons[5]~input_o ;
+wire \buttons[1]~input_o ;
+wire \buttons[0]~input_o ;
+wire \buttons[2]~input_o ;
+wire \buttons[3]~input_o ;
+wire \WideOr3~0_combout ;
+wire \buttons[6]~input_o ;
+wire \leds~7_combout ;
+wire \leds~8_combout ;
+wire \WideOr2~0_combout ;
+wire \leds~9_combout ;
+wire \WideOr1~0_combout ;
+wire \leds~17_combout ;
+wire \leds~10_combout ;
+wire \leds~11_combout ;
+wire \leds~12_combout ;
+wire \leds~18_combout ;
+wire \leds~14_combout ;
+wire \leds~13_combout ;
+wire \leds~15_combout ;
+wire \leds~19_combout ;
+wire \leds~16_combout ;
+
+
+// Location: IOOBUF_X38_Y34_N16
+cycloneive_io_obuf \leds[0]~output (
+	.i(\leds~8_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\leds[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \leds[0]~output .bus_hold = "false";
+defparam \leds[0]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X49_Y34_N2
+cycloneive_io_obuf \leds[1]~output (
+	.i(\leds~9_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\leds[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \leds[1]~output .bus_hold = "false";
+defparam \leds[1]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X49_Y34_N9
+cycloneive_io_obuf \leds[2]~output (
+	.i(\leds~17_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\leds[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \leds[2]~output .bus_hold = "false";
+defparam \leds[2]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X40_Y34_N2
+cycloneive_io_obuf \leds[3]~output (
+	.i(!\leds~10_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\leds[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \leds[3]~output .bus_hold = "false";
+defparam \leds[3]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y25_N9
+cycloneive_io_obuf \leds[4]~output (
+	.i(\leds~18_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\leds[4]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \leds[4]~output .bus_hold = "false";
+defparam \leds[4]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y26_N16
+cycloneive_io_obuf \leds[5]~output (
+	.i(\leds~15_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\leds[5]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \leds[5]~output .bus_hold = "false";
+defparam \leds[5]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y28_N9
+cycloneive_io_obuf \leds[6]~output (
+	.i(\leds~19_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\leds[6]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \leds[6]~output .bus_hold = "false";
+defparam \leds[6]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y10_N23
+cycloneive_io_obuf \leds[7]~output (
+	.i(!\leds~16_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\leds[7]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \leds[7]~output .bus_hold = "false";
+defparam \leds[7]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X3_Y34_N1
+cycloneive_io_ibuf \buttons[4]~input (
+	.i(buttons[4]),
+	.ibar(gnd),
+	.o(\buttons[4]~input_o ));
+// synopsys translate_off
+defparam \buttons[4]~input .bus_hold = "false";
+defparam \buttons[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X11_Y34_N1
+cycloneive_io_ibuf \buttons[7]~input (
+	.i(buttons[7]),
+	.ibar(gnd),
+	.o(\buttons[7]~input_o ));
+// synopsys translate_off
+defparam \buttons[7]~input .bus_hold = "false";
+defparam \buttons[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y16_N22
+cycloneive_io_ibuf \switch~input (
+	.i(switch),
+	.ibar(gnd),
+	.o(\switch~input_o ));
+// synopsys translate_off
+defparam \switch~input .bus_hold = "false";
+defparam \switch~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X7_Y30_N16
+cycloneive_lcell_comb \leds~6 (
+// Equation(s):
+// \leds~6_combout  = (\buttons[7]~input_o  & \switch~input_o )
+
+	.dataa(\buttons[7]~input_o ),
+	.datab(gnd),
+	.datac(\switch~input_o ),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\leds~6_combout ),
+	.cout());
+// synopsys translate_off
+defparam \leds~6 .lut_mask = 16'hA0A0;
+defparam \leds~6 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X7_Y34_N1
+cycloneive_io_ibuf \buttons[5]~input (
+	.i(buttons[5]),
+	.ibar(gnd),
+	.o(\buttons[5]~input_o ));
+// synopsys translate_off
+defparam \buttons[5]~input .bus_hold = "false";
+defparam \buttons[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X1_Y34_N1
+cycloneive_io_ibuf \buttons[1]~input (
+	.i(buttons[1]),
+	.ibar(gnd),
+	.o(\buttons[1]~input_o ));
+// synopsys translate_off
+defparam \buttons[1]~input .bus_hold = "false";
+defparam \buttons[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X1_Y34_N8
+cycloneive_io_ibuf \buttons[0]~input (
+	.i(buttons[0]),
+	.ibar(gnd),
+	.o(\buttons[0]~input_o ));
+// synopsys translate_off
+defparam \buttons[0]~input .bus_hold = "false";
+defparam \buttons[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X7_Y34_N8
+cycloneive_io_ibuf \buttons[2]~input (
+	.i(buttons[2]),
+	.ibar(gnd),
+	.o(\buttons[2]~input_o ));
+// synopsys translate_off
+defparam \buttons[2]~input .bus_hold = "false";
+defparam \buttons[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X7_Y34_N15
+cycloneive_io_ibuf \buttons[3]~input (
+	.i(buttons[3]),
+	.ibar(gnd),
+	.o(\buttons[3]~input_o ));
+// synopsys translate_off
+defparam \buttons[3]~input .bus_hold = "false";
+defparam \buttons[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X7_Y30_N26
+cycloneive_lcell_comb \WideOr3~0 (
+// Equation(s):
+// \WideOr3~0_combout  = (\buttons[3]~input_o  & (((\buttons[1]~input_o  & !\buttons[0]~input_o )) # (!\buttons[2]~input_o )))
+
+	.dataa(\buttons[1]~input_o ),
+	.datab(\buttons[0]~input_o ),
+	.datac(\buttons[2]~input_o ),
+	.datad(\buttons[3]~input_o ),
+	.cin(gnd),
+	.combout(\WideOr3~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \WideOr3~0 .lut_mask = 16'h2F00;
+defparam \WideOr3~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X9_Y34_N22
+cycloneive_io_ibuf \buttons[6]~input (
+	.i(buttons[6]),
+	.ibar(gnd),
+	.o(\buttons[6]~input_o ));
+// synopsys translate_off
+defparam \buttons[6]~input .bus_hold = "false";
+defparam \buttons[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X7_Y30_N12
+cycloneive_lcell_comb \leds~7 (
+// Equation(s):
+// \leds~7_combout  = (\leds~6_combout  & (((\WideOr3~0_combout  & \buttons[5]~input_o )) # (!\buttons[6]~input_o )))
+
+	.dataa(\WideOr3~0_combout ),
+	.datab(\buttons[5]~input_o ),
+	.datac(\buttons[6]~input_o ),
+	.datad(\leds~6_combout ),
+	.cin(gnd),
+	.combout(\leds~7_combout ),
+	.cout());
+// synopsys translate_off
+defparam \leds~7 .lut_mask = 16'h8F00;
+defparam \leds~7 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X7_Y30_N22
+cycloneive_lcell_comb \leds~8 (
+// Equation(s):
+// \leds~8_combout  = (\leds~7_combout ) # ((!\buttons[4]~input_o  & (\leds~6_combout  & \buttons[5]~input_o )))
+
+	.dataa(\buttons[4]~input_o ),
+	.datab(\leds~6_combout ),
+	.datac(\buttons[5]~input_o ),
+	.datad(\leds~7_combout ),
+	.cin(gnd),
+	.combout(\leds~8_combout ),
+	.cout());
+// synopsys translate_off
+defparam \leds~8 .lut_mask = 16'hFF40;
+defparam \leds~8 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X7_Y30_N8
+cycloneive_lcell_comb \WideOr2~0 (
+// Equation(s):
+// \WideOr2~0_combout  = (\buttons[4]~input_o  & (\buttons[3]~input_o  & ((!\buttons[2]~input_o ) # (!\buttons[1]~input_o ))))
+
+	.dataa(\buttons[4]~input_o ),
+	.datab(\buttons[1]~input_o ),
+	.datac(\buttons[2]~input_o ),
+	.datad(\buttons[3]~input_o ),
+	.cin(gnd),
+	.combout(\WideOr2~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \WideOr2~0 .lut_mask = 16'h2A00;
+defparam \WideOr2~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X7_Y30_N18
+cycloneive_lcell_comb \leds~9 (
+// Equation(s):
+// \leds~9_combout  = (\leds~6_combout  & (((\WideOr2~0_combout ) # (!\buttons[5]~input_o )) # (!\buttons[6]~input_o )))
+
+	.dataa(\buttons[6]~input_o ),
+	.datab(\buttons[5]~input_o ),
+	.datac(\WideOr2~0_combout ),
+	.datad(\leds~6_combout ),
+	.cin(gnd),
+	.combout(\leds~9_combout ),
+	.cout());
+// synopsys translate_off
+defparam \leds~9 .lut_mask = 16'hF700;
+defparam \leds~9 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X7_Y30_N28
+cycloneive_lcell_comb \WideOr1~0 (
+// Equation(s):
+// \WideOr1~0_combout  = (\buttons[4]~input_o  & (\buttons[5]~input_o  & (\buttons[6]~input_o  & \buttons[3]~input_o )))
+
+	.dataa(\buttons[4]~input_o ),
+	.datab(\buttons[5]~input_o ),
+	.datac(\buttons[6]~input_o ),
+	.datad(\buttons[3]~input_o ),
+	.cin(gnd),
+	.combout(\WideOr1~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \WideOr1~0 .lut_mask = 16'h8000;
+defparam \WideOr1~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X7_Y30_N10
+cycloneive_lcell_comb \leds~17 (
+// Equation(s):
+// \leds~17_combout  = (\buttons[7]~input_o  & (!\WideOr1~0_combout  & \switch~input_o ))
+
+	.dataa(\buttons[7]~input_o ),
+	.datab(\WideOr1~0_combout ),
+	.datac(\switch~input_o ),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\leds~17_combout ),
+	.cout());
+// synopsys translate_off
+defparam \leds~17 .lut_mask = 16'h2020;
+defparam \leds~17 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X7_Y30_N6
+cycloneive_lcell_comb \leds~10 (
+// Equation(s):
+// \leds~10_combout  = (\buttons[7]~input_o ) # (!\switch~input_o )
+
+	.dataa(\buttons[7]~input_o ),
+	.datab(gnd),
+	.datac(\switch~input_o ),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\leds~10_combout ),
+	.cout());
+// synopsys translate_off
+defparam \leds~10 .lut_mask = 16'hAFAF;
+defparam \leds~10 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X7_Y30_N0
+cycloneive_lcell_comb \leds~11 (
+// Equation(s):
+// \leds~11_combout  = (\buttons[3]~input_o  & (((\buttons[1]~input_o  & !\buttons[0]~input_o )) # (!\buttons[2]~input_o )))
+
+	.dataa(\buttons[1]~input_o ),
+	.datab(\buttons[0]~input_o ),
+	.datac(\buttons[2]~input_o ),
+	.datad(\buttons[3]~input_o ),
+	.cin(gnd),
+	.combout(\leds~11_combout ),
+	.cout());
+// synopsys translate_off
+defparam \leds~11 .lut_mask = 16'h2F00;
+defparam \leds~11 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X7_Y30_N2
+cycloneive_lcell_comb \leds~12 (
+// Equation(s):
+// \leds~12_combout  = ((\buttons[5]~input_o  & ((\leds~11_combout ) # (!\buttons[4]~input_o )))) # (!\buttons[6]~input_o )
+
+	.dataa(\buttons[4]~input_o ),
+	.datab(\buttons[5]~input_o ),
+	.datac(\buttons[6]~input_o ),
+	.datad(\leds~11_combout ),
+	.cin(gnd),
+	.combout(\leds~12_combout ),
+	.cout());
+// synopsys translate_off
+defparam \leds~12 .lut_mask = 16'hCF4F;
+defparam \leds~12 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X7_Y30_N4
+cycloneive_lcell_comb \leds~18 (
+// Equation(s):
+// \leds~18_combout  = (\buttons[7]~input_o  & (\leds~12_combout  & !\switch~input_o ))
+
+	.dataa(\buttons[7]~input_o ),
+	.datab(\leds~12_combout ),
+	.datac(\switch~input_o ),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\leds~18_combout ),
+	.cout());
+// synopsys translate_off
+defparam \leds~18 .lut_mask = 16'h0808;
+defparam \leds~18 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X7_Y30_N14
+cycloneive_lcell_comb \leds~14 (
+// Equation(s):
+// \leds~14_combout  = (\buttons[4]~input_o  & (\buttons[3]~input_o  & ((!\buttons[2]~input_o ) # (!\buttons[1]~input_o ))))
+
+	.dataa(\buttons[4]~input_o ),
+	.datab(\buttons[1]~input_o ),
+	.datac(\buttons[2]~input_o ),
+	.datad(\buttons[3]~input_o ),
+	.cin(gnd),
+	.combout(\leds~14_combout ),
+	.cout());
+// synopsys translate_off
+defparam \leds~14 .lut_mask = 16'h2A00;
+defparam \leds~14 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X7_Y30_N20
+cycloneive_lcell_comb \leds~13 (
+// Equation(s):
+// \leds~13_combout  = (\buttons[7]~input_o  & !\switch~input_o )
+
+	.dataa(\buttons[7]~input_o ),
+	.datab(gnd),
+	.datac(\switch~input_o ),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\leds~13_combout ),
+	.cout());
+// synopsys translate_off
+defparam \leds~13 .lut_mask = 16'h0A0A;
+defparam \leds~13 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X7_Y30_N24
+cycloneive_lcell_comb \leds~15 (
+// Equation(s):
+// \leds~15_combout  = (\leds~13_combout  & (((\leds~14_combout ) # (!\buttons[5]~input_o )) # (!\buttons[6]~input_o )))
+
+	.dataa(\buttons[6]~input_o ),
+	.datab(\buttons[5]~input_o ),
+	.datac(\leds~14_combout ),
+	.datad(\leds~13_combout ),
+	.cin(gnd),
+	.combout(\leds~15_combout ),
+	.cout());
+// synopsys translate_off
+defparam \leds~15 .lut_mask = 16'hF700;
+defparam \leds~15 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X7_Y30_N30
+cycloneive_lcell_comb \leds~19 (
+// Equation(s):
+// \leds~19_combout  = (\buttons[7]~input_o  & (!\WideOr1~0_combout  & !\switch~input_o ))
+
+	.dataa(\buttons[7]~input_o ),
+	.datab(\WideOr1~0_combout ),
+	.datac(\switch~input_o ),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\leds~19_combout ),
+	.cout());
+// synopsys translate_off
+defparam \leds~19 .lut_mask = 16'h0202;
+defparam \leds~19 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X7_Y27_N8
+cycloneive_lcell_comb \leds~16 (
+// Equation(s):
+// \leds~16_combout  = (\switch~input_o ) # (\buttons[7]~input_o )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\switch~input_o ),
+	.datad(\buttons[7]~input_o ),
+	.cin(gnd),
+	.combout(\leds~16_combout ),
+	.cout());
+// synopsys translate_off
+defparam \leds~16 .lut_mask = 16'hFFF0;
+defparam \leds~16 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+assign leds[0] = \leds[0]~output_o ;
+
+assign leds[1] = \leds[1]~output_o ;
+
+assign leds[2] = \leds[2]~output_o ;
+
+assign leds[3] = \leds[3]~output_o ;
+
+assign leds[4] = \leds[4]~output_o ;
+
+assign leds[5] = \leds[5]~output_o ;
+
+assign leds[6] = \leds[6]~output_o ;
+
+assign leds[7] = \leds[7]~output_o ;
+
+endmodule

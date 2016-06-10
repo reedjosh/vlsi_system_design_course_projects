@@ -1,0 +1,29 @@
+# vsim -t 100ps -L cycloneive_ver -L altera_mf_ver work.sev_seg -do "../scripts/sim.do" 
+# Start time: 16:21:13 on Jun 03,2016
+# Loading sv_std.std
+# Loading work.sev_seg
+# Loading work.pll_leds
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading work.clk_cntr
+# Loading work.seg_driver
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+# ** Warning: (vsim-3017) ../src/sev_seg.sv(58): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /sev_seg/pll_leds_inst File: ../qpd/pll_leds.v
+# ** Warning: (vsim-3722) ../src/sev_seg.sv(58): [TFMPC] - Missing connection for port 'c0'.
+# ** Warning: (vsim-3722) ../src/sev_seg.sv(58): [TFMPC] - Missing connection for port 'c1'.
+# ** Warning: (vsim-3015) ../src/sev_seg.sv(68): [PCDPC] - Port size (16) does not match connection size (32) for port 'num'. The port definition is at: ../src/sev_seg.sv(104).
+#    Time: 0 ps  Iteration: 0  Instance: /sev_seg/disp File: ../src/sev_seg.sv
+# do ../scripts/sim.do
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# ** Error (suppressible): (vsim-8630) /build/swbuild/SJ/nightly/15.1/185/l64/work/modelsim/eda/sim_lib/altera_mf.v(15705): Infinity results from division operation.
+# ** Error (suppressible): (vsim-8630) /build/swbuild/SJ/nightly/15.1/185/l64/work/modelsim/eda/sim_lib/altera_mf.v(15705): Infinity results from division operation.
+# ** Error (suppressible): (vsim-8630) /build/swbuild/SJ/nightly/15.1/185/l64/work/modelsim/eda/sim_lib/altera_mf.v(15705): Infinity results from division operation.
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 900  Instance: sev_seg.pll_leds_inst.altpll_component.cycloneiii_pll.pll3
+# End time: 16:22:00 on Jun 03,2016, Elapsed time: 0:00:47
+# Errors: 3, Warnings: 5

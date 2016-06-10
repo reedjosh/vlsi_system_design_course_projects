@@ -1,0 +1,8 @@
+/home/josh/Documents/vsys/sine_gen/qpd/pll_10_khz.v {1 {vlog -work work -stats=none /home/josh/Documents/vsys/sine_gen/qpd/pll_10_khz.v
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module pll_10_khz
+
+Top level modules:
+	pll_10_khz
+
+} {} {}}

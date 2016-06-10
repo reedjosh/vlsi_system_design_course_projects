@@ -1,0 +1,96 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/josh
+vpll_10_khz
+Z0 !s110 1462881020
+!i10b 1
+!s100 ^8mn9X9QzdgF;]NFkKXUc0
+IkG7NbEAU?JOjCVe:BQ10;2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 d/home/josh/Documents/vsys/sine_gen/mpd
+w1461789738
+8../qpd/pll_10_khz.v
+F../qpd/pll_10_khz.v
+L0 40
+Z3 OV;L;10.4b;61
+r1
+!s85 0
+31
+Z4 !s108 1462881020.000000
+!s107 ../qpd/pll_10_khz.v|
+!s90 ../qpd/pll_10_khz.v|
+!i113 1
+vsine_gen
+Z5 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+R0
+!i10b 1
+!s100 0nP==Rc@7MiglmX=IW^]_0
+IAMog>AM;zU3kIdDJ8I[L:2
+R1
+Z6 !s105 sine_gen_sv_unit
+S1
+R2
+w1462565739
+8../src/sine_gen.sv
+F../src/sine_gen.sv
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+Z7 !s107 ../src/sine_rom.sv|../src/sine_gen.sv|
+Z8 !s90 ../src/sine_gen.sv|../src/sine_rom.sv|
+!i113 1
+vsine_gen_tb
+R5
+!s110 1461796409
+!i10b 1
+!s100 CC_UO_[i`Dh_SUX>:_BnQ1
+IEDh4RaLG@`6gj;0>n<EE80
+R1
+R6
+S1
+R2
+w1461789931
+8/home/josh/Documents/vsys/sine_gen/src/sine_gen.sv
+F/home/josh/Documents/vsys/sine_gen/src/sine_gen.sv
+L0 50
+R3
+r1
+!s85 0
+31
+!s108 1461796409.000000
+!s107 /home/josh/Documents/vsys/sine_gen/src/sine_gen.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/josh/Documents/vsys/sine_gen/src/sine_gen.sv|
+!i113 1
+o-work work -sv
+vsine_rom
+R5
+R0
+!i10b 1
+!s100 =Ul6>hoX47n2G[E6e5IiK1
+IZ<G4478AA1o[[]ohoBZF]0
+R1
+!s105 sine_rom_sv_unit
+S1
+R2
+w1462565781
+8../src/sine_rom.sv
+F../src/sine_rom.sv
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R7
+R8
+!i113 1

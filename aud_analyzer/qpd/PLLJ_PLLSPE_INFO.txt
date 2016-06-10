@@ -1,0 +1,5 @@
+PLL_Name	baud_gen:pll|altpll:altpll_component|baud_gen_altpll:auto_generated|pll1
+PLLJITTER	36
+PLLSPEmax	84
+PLLSPEmin	-53
+

@@ -1,0 +1,7 @@
+Start time: 05:51:20 on May 10,2016
+vlog ../qpd/*.v > tempfile 
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+** Error: (vlog-7) Failed to open design unit file "../qpd/*.v" in read mode.
+No such file or directory. (errno = ENOENT)
+End time: 05:51:20 on May 10,2016, Elapsed time: 0:00:00
+Errors: 1, Warnings: 0

@@ -1,8 +1,0 @@
-/home/josh/Documents/vsys/sine_gen/src/sine_rom.sv {1 {vlog -work work -sv -stats=none /home/josh/Documents/vsys/sine_gen/src/sine_rom.sv
-Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
--- Compiling module sine_rom
-
-Top level modules:
-	sine_rom
-
-} {} {}}

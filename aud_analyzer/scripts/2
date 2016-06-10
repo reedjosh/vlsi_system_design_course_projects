@@ -1,0 +1,5 @@
+  
+    # Add Signals to Waveform
+    add wave /adc_tb/uut/\*
+    # Run simulation
+    run 200 ms

@@ -1,0 +1,64 @@
+# Current time Thu May  5 16:09:57 2016
+# ModelSim Stack Trace
+# Program = vish
+# Id = "10.4b"
+# Version = "2015.05"
+# Date = "May 27 2015"
+# Platform = linuxpe
+# 0    0xf7fd8d49: '<unknown (@0xf7fd8d49)>'
+# 1    0x083d7ba3: 'Tk_DestroyWindow + 0x493' in '/opt/altera/15.1/modelsim_ase/linuxaloem/vish'
+# 2    0x083d77e8: 'Tk_DestroyWindow + 0xd8' in '/opt/altera/15.1/modelsim_ase/linuxaloem/vish'
+# 3    0x083d77e8: 'Tk_DestroyWindow + 0xd8' in '/opt/altera/15.1/modelsim_ase/linuxaloem/vish'
+# 4    0x083d7ccf: '<unknown (@0x83d7ccf)>'
+# 5    0x083c8141: '<unknown (@0x83c8141)>'
+# 6    0x084e78c0: 'Tcl_FinalizeThread + 0x40' in '/opt/altera/15.1/modelsim_ase/linuxaloem/vish'
+# 7    0x084e7990: 'Tcl_Finalize + 0x90' in '/opt/altera/15.1/modelsim_ase/linuxaloem/vish'
+# 8    0x084e7a91: 'Tcl_Exit + 0x41' in '/opt/altera/15.1/modelsim_ase/linuxaloem/vish'
+# 9    0x084ac4c4: '<unknown (@0x84ac4c4)>'
+# 10   0x084a2e0d: '<unknown (@0x84a2e0d)>'
+# 11   0x084eba2a: '<unknown (@0x84eba2a)>'
+# 12   0x08533415: 'TclObjInterpProcCore + 0x115' in '/opt/altera/15.1/modelsim_ase/linuxaloem/vish'
+# 13   0x085339b2: 'TclObjInterpProc + 0x62' in '/opt/altera/15.1/modelsim_ase/linuxaloem/vish'
+# 14   0x084a2e0d: '<unknown (@0x84a2e0d)>'
+# 15   0x084a48c6: '<unknown (@0x84a48c6)>'
+# 16   0x084a4eb5: 'Tcl_EvalEx + 0x35' in '/opt/altera/15.1/modelsim_ase/linuxaloem/vish'
+# 17   0x084a4ef7: 'Tcl_Eval + 0x37' in '/opt/altera/15.1/modelsim_ase/linuxaloem/vish'
+# 18   0x081b2b05: '<unknown (@0x81b2b05)>'
+# 19   0x0859e9ad: 'vhdl_exit + 0x1d' in '/opt/altera/15.1/modelsim_ase/linuxaloem/vish'
+# 20   0x081b3d39: 'vish_catch_signal + 0x7d9' in '/opt/altera/15.1/modelsim_ase/linuxaloem/vish'
+# 21   0xf7fd8d2b: '<unknown (@0xf7fd8d2b)>'
+# 22   0x08f64273: '<unknown (@0x8f64273)>'
+# End of Stack Trace
+
+# Current time Thu May  5 16:09:57 2016
+# ModelSim Stack Trace
+# Program = vish
+# Id = "10.4b"
+# Version = "2015.05"
+# Date = "May 27 2015"
+# Platform = linuxpe
+# 0    0xf7fd8d49: '<unknown (@0xf7fd8d49)>'
+# 1    0x083d7ba3: 'Tk_DestroyWindow + 0x493' in '/opt/altera/15.1/modelsim_ase/linuxaloem/vish'
+# 2    0x083d77e8: 'Tk_DestroyWindow + 0xd8' in '/opt/altera/15.1/modelsim_ase/linuxaloem/vish'
+# 3    0x083d77e8: 'Tk_DestroyWindow + 0xd8' in '/opt/altera/15.1/modelsim_ase/linuxaloem/vish'
+# 4    0x083d7ccf: '<unknown (@0x83d7ccf)>'
+# 5    0x083c8141: '<unknown (@0x83c8141)>'
+# 6    0x084e78c0: 'Tcl_FinalizeThread + 0x40' in '/opt/altera/15.1/modelsim_ase/linuxaloem/vish'
+# 7    0x084e7990: 'Tcl_Finalize + 0x90' in '/opt/altera/15.1/modelsim_ase/linuxaloem/vish'
+# 8    0x084e7a91: 'Tcl_Exit + 0x41' in '/opt/altera/15.1/modelsim_ase/linuxaloem/vish'
+# 9    0x084ac4c4: '<unknown (@0x84ac4c4)>'
+# 10   0x084a2e0d: '<unknown (@0x84a2e0d)>'
+# 11   0x084eba2a: '<unknown (@0x84eba2a)>'
+# 12   0x08533415: 'TclObjInterpProcCore + 0x115' in '/opt/altera/15.1/modelsim_ase/linuxaloem/vish'
+# 13   0x085339b2: 'TclObjInterpProc + 0x62' in '/opt/altera/15.1/modelsim_ase/linuxaloem/vish'
+# 14   0x084a2e0d: '<unknown (@0x84a2e0d)>'
+# 15   0x084a48c6: '<unknown (@0x84a48c6)>'
+# 16   0x084a4eb5: 'Tcl_EvalEx + 0x35' in '/opt/altera/15.1/modelsim_ase/linuxaloem/vish'
+# 17   0x084a4ef7: 'Tcl_Eval + 0x37' in '/opt/altera/15.1/modelsim_ase/linuxaloem/vish'
+# 18   0x081b2b05: '<unknown (@0x81b2b05)>'
+# 19   0x0859e9ad: 'vhdl_exit + 0x1d' in '/opt/altera/15.1/modelsim_ase/linuxaloem/vish'
+# 20   0x081b3d39: 'vish_catch_signal + 0x7d9' in '/opt/altera/15.1/modelsim_ase/linuxaloem/vish'
+# 21   0xf7fd8d2b: '<unknown (@0xf7fd8d2b)>'
+# 22   0x08f64273: '<unknown (@0x8f64273)>'
+# End of Stack Trace
+

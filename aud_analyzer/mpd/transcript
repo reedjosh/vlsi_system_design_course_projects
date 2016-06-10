@@ -1,0 +1,326 @@
+# vsim -t 100ps work.top_tb -do "../scripts/sim.do" 
+# Start time: 18:32:32 on Jun 08,2016
+# Loading sv_std.std
+# Loading work.uart_sv_unit
+# Loading work.top_tb
+# Loading work.top
+# Loading work.clk_cntr
+# Loading work.uart
+# Loading work.rx
+# Loading work.tx
+# do ../scripts/sim.do
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  << Sim Starting >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+# 0 ps
+# 21 us
+do ../scripts/sim.do
+# Loading work.uart_sv_unit
+# Loading work.top_tb
+# Loading work.top
+# Loading work.clk_cntr
+# Loading work.uart
+# Loading work.rx
+# Loading work.tx
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  << Sim Starting >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+# 0 ps
+# 21 us
+run 21 us
+run 21 us
+do ../scripts/sim.do
+# Loading work.uart_sv_unit
+# Loading work.top_tb
+# Loading work.top
+# Loading work.clk_cntr
+# Loading work.uart
+# Loading work.rx
+# Loading work.tx
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  << Sim Starting >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+# 0 ps
+# 21 us
+do ../scripts/sim.do
+# Loading work.uart_sv_unit
+# Loading work.top_tb
+# Loading work.top
+# Loading work.clk_cntr
+# Loading work.uart
+# Loading work.rx
+# Loading work.tx
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  << Sim Starting >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+# 0 ps
+# 21 us
+do ../scripts/sim.do
+# Loading work.uart_sv_unit
+# Loading work.top_tb
+# Loading work.top
+# Loading work.clk_cntr
+# Loading work.uart
+# Loading work.rx
+# Loading work.tx
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  << Sim Starting >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+# 0 ps
+# 21 us
+do ../scripts/sim.do
+# Loading work.uart_sv_unit
+# Loading work.top_tb
+# Loading work.top
+# Loading work.clk_cntr
+# Loading work.uart
+# Loading work.rx
+# Loading work.tx
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  << Sim Starting >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+# 0 ps
+# 21 us
+run 20us
+run 20us
+do ../scripts/sim.do
+# Loading work.uart_sv_unit
+# Loading work.top_tb
+# Loading work.top
+# Loading work.clk_cntr
+# Loading work.uart
+# Loading work.rx
+# Loading work.tx
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  << Sim Starting >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+# 0 ps
+# 21 us
+do ../scripts/sim.do
+# Loading work.uart_sv_unit
+# Loading work.top_tb
+# Loading work.top
+# Loading work.clk_cntr
+# Loading work.uart
+# Loading work.rx
+# Loading work.tx
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  << Sim Starting >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+# 0 ps
+# 21 us
+run 20us
+run 20us
+do ../scripts/sim.do
+# Loading work.uart_sv_unit
+# Loading work.top_tb
+# Loading work.top
+# Loading work.clk_cntr
+# Loading work.uart
+# Loading work.rx
+# Loading work.tx
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  << Sim Starting >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+# 0 ps
+# 21 us
+do ../scripts/sim.do
+# Loading work.uart_sv_unit
+# Loading work.top_tb
+# Loading work.top
+# Loading work.clk_cntr
+# Loading work.uart
+# Loading work.rx
+# Loading work.tx
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  << Sim Starting >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+# 0 ps
+# 21 us
+do ../scripts/sim.do
+# Loading work.uart_sv_unit
+# Loading work.top_tb
+# Loading work.top
+# Loading work.clk_cntr
+# Loading work.uart
+# Loading work.rx
+# Loading work.tx
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  << Sim Starting >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+# 0 ps
+# 21 us
+do ../scripts/sim.do
+# Loading work.uart_sv_unit
+# Loading work.top_tb
+# Loading work.top
+# Loading work.clk_cntr
+# Loading work.uart
+# Loading work.rx
+# Loading work.tx
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  << Sim Starting >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+# 0 ps
+# 21 us
+do ../scripts/sim.do
+# Loading work.uart_sv_unit
+# Loading work.top_tb
+# Loading work.top
+# Loading work.clk_cntr
+# Loading work.uart
+# Loading work.rx
+# Loading work.tx
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  << Sim Starting >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+# 0 ps
+# 21 us
+do ../scripts/sim.do
+# Loading work.uart_sv_unit
+# Loading work.top_tb
+# Loading work.top
+# Loading work.clk_cntr
+# Loading work.uart
+# Loading work.rx
+# Loading work.tx
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  << Sim Starting >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+#  <<              >> 
+# 0 ps
+# 21 us
+do ../scripts/sim.do
+# Loading work.uart_sv_unit
+# Loading work.top_tb
+# Loading work.top
+# Loading work.baud_gen
+# ** Error (suppressible): (vsim-3009) [TSCALE] - Module 'top_tb' does not have a timeunit/timeprecision specification in effect, but other modules do.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut1/pll File: ../qpd/baud_gen.v
+# ** Error: (vsim-3033) ../qpd/baud_gen.v(58): Instantiation of 'altpll' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut1/pll File: ../qpd/baud_gen.v
+#         Searched libraries:
+#             /home/josh/Documents/vsys/aud_analyzer/mpd/work
+# Loading work.uart
+# Loading work.rx
+# Loading work.tx
+# ** Error: (vsim-3033) ../qpd/baud_gen.v(58): Instantiation of 'altpll' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut2/pll File: ../qpd/baud_gen.v
+#         Searched libraries:
+#             /home/josh/Documents/vsys/aud_analyzer/mpd/work
+# ** Error: Unrecognized dataset prefix: sim
+# Error in macro ./../scripts/sim.do line 7
+# Unrecognized dataset prefix: sim
+#     while executing
+# "add wave -position end  sim:/top_tb/uut1/receive_buffer"
