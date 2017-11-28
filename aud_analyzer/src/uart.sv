@@ -1,65 +1,58 @@
 ////////////////////////////////////////////////////////////
-// Aud_Analyzer implementation
+// Bluetooth HC-05 Implementation
 // By Joshua Reed
 // Created Spring 2016
 ////////////////////////////////////////////////////////////
+//
+// DE0 Information
+// 
+// LEDS are active high.
+//
 
-  
-// buffered characther and valid bit
+
+////////////////////////////////////////////////////////////
+// Functions, Tasks, and Types
+////////////////////////////////////////////////////////////
+// Char type.
 typedef struct{
     logic [7:0] data;
     logic       val;
     } char;
 
+// Char array.
 typedef char char_arr [7:0];
 
-task insert_right( inout char_arr arr, input logic [7:0] data, input logic val );
+// Insert an element at the right side of a register. 
+task insert_right(inout char_arr arr, input logic [7:0] data, input logic val );
     arr[7:1] = arr[6:0];
     arr[0].data = data;
     arr[0].val = val;
     return;
     endtask
     
-task insert_left( inout char_arr arr, input logic [7:0] data, input logic val );
-    arr[6:0] =  arr[7:$right(arr)+1] ;
+// Insert an element at the left side of a register. 
+task insert_left(inout char_arr arr, input logic [7:0] data, input logic val );
+    arr[6:0] =  arr[7:$right(arr)+1];
     arr[7].data = data;
-    arr[7].val = val;
     return;
     endtask
 
-function logic is_eq(char pred1, pred2);
-    if (pred1.data == pred2.data &&
-        pred1.val  == pred2.val) return 1;
-    else return 0;
-    endfunction
-
-//function logic insert_right(char [] bc1, char bc2);
-//            
-//    endfunction
- 
-
 ////////////////////////////////////////////////////////////
-// uart test
+// TOP
 ////////////////////////////////////////////////////////////
-module top( input  logic clk, reset, rx,
-            //input char_arr init,
-            output logic tx );
+module top(input  logic clk, reset, rx, increment,
+           output logic unsigned [7:0] leds,
+           output logic tx);
 
-    // 
-    // function logic is_eq(input char bc1, bc2);
-    //    if (bc1.char == bc2.char && bc1.valid == bc2.valid) return 1;
-    //    else return 0;
-    //    endfunction
-    //
     logic rx_clk, baud_clk;
     logic tx_done, prev_tx_done;
     logic rx_drdy, prev_rx_drdy;
     logic send_next_byte;
     logic load_next_byte;
     logic send;
-    const char init [7:0] = '{ default:'{"Z", 0}, 2:'{"1", 1'b1}, 3:'{"2", 1'b1}, 4:'{"3", 1'b1} };
-    //const char init1 [7:0] = '{ default:'{"Z", 0}, 0:'{"A", 1}, 1:'{"B",1}, 2:'{"C",1} };  
-    //const char init [7:0] = '{ default:'{"", 0}, 0:'{"R", 1'b1} , 1:'{"B",1}, 2:'{"C",1}};
+    const char init [7:0] = '{default:'{"Z", 0}, 2:'{"1", 1'b1}, 3:'{"2", 1'b1}, 4:'{"3", 1'b1} };
+
+    assign leds = 200;
         
     char_arr receive_buffer;
     char_arr send_buffer;
@@ -67,9 +60,8 @@ module top( input  logic clk, reset, rx,
 
     // sequential logic 
     always_ff@(posedge rx_clk, negedge reset) begin
-
         if (~reset) send_buffer = init;
-        else if ( receive_buffer[7].data == "R") begin
+        else if (receive_buffer[7].data == "R") begin
             send_buffer = init;
             insert_right(receive_buffer, 0, 1'b0);
             end
@@ -92,23 +84,15 @@ module top( input  logic clk, reset, rx,
 
     // combinational logic 
     always_comb begin
-
         if (tx_done == 1 && prev_tx_done == 0) send_next_byte <= 1;
-        else                                   send_next_byte <= 0;
-
+        
+else                                   send_next_byte <= 0;
 
         if (rx_drdy == 1 && prev_rx_drdy == 0) load_next_byte <= 1;
         else                                   load_next_byte <= 0;
 
         end
     
-    //clk_cntr cc( // clk counter to be replaced by pll in implementation
-    //    .clk      ( rx_clk ), 
-    //    .reset    ( reset        ),
-    //    .cnt_to   ( 8            ), // devide the baud_clk by 16
-    //    .clk_o    ( baud_clk     ) );
-    //assign rx_clk = clk;
-
 
     // uart pll
     baud_gen pll(
@@ -132,11 +116,6 @@ module top( input  logic clk, reset, rx,
 
     endmodule
 
-   // TODO remove this testing code when ready 
-   // always_ff@(posedge baud_clk, negedge reset)
-   //     if (~reset) chars <= {"A","B","C"};
-   //     else if (load != load_prev) chars <= {chars[1:0], chars[2]}; 
-   //
     
 ////////////////////////////////////////////////////////////
 // uart 
@@ -201,7 +180,7 @@ module tx( input  logic          clk, reset, send,
     always_ff@(posedge clk, negedge reset)
         if (~reset) cnt <= 0; // tx_done countdown timer
         else if (send && cnt == 0) cnt <= 9; // reload count down timer
-        else if (cnt != 0) cnt <= cnt - 1; // count down
+        else if (cnt != 4'b0) cnt <= cnt - 4'b1; // count down
 
     // data out (tx) enabling
     always_comb  
@@ -247,8 +226,6 @@ module rx( input  logic                clk, reset, rx,
     logic [13:0] ones   = '{14{1'b1}};
     logic [13:0] zeroes = '{14{1'b0}};
 
-    assign data_available = trg;
-
     // shift in rx values
     always_ff@(posedge clk, negedge reset)
         if (~reset) sipo <= '{default:1'b0};
@@ -258,7 +235,7 @@ module rx( input  logic                clk, reset, rx,
     always_ff@(posedge clk, negedge reset)
         if (~reset) cnt <= 0;
         else if (trg) cnt <= 158; // hold off -- msg triggered
-        else if (cnt != 0) cnt <= cnt - 1;
+        else if (cnt != 0) cnt <= cnt - 8'b1;
 
     always_ff@(posedge clk, negedge reset)
         if (~reset) prev_cnt <= 0;
@@ -322,50 +299,50 @@ module rx( input  logic                clk, reset, rx,
 ////////////////////////////////////////////////////////////
 // testbench
 ////////////////////////////////////////////////////////////
-module top_tb( ); // no signals -- tb
-
-    logic clk, reset, go;
-    logic loopback1;
-    logic loopback2;
-
-    initial begin
-        $display(       " <<              >> ");
-        $display(       " <<              >> ");
-        $display(       " <<              >> ");
-        $display(       " <<              >> ");
-        $display(       " <<              >> ");
-        $display(       " << Sim Starting >> ");
-        $display(       " <<              >> ");
-        $display(       " <<              >> ");
-        $display(       " <<              >> ");
-        $display(       " <<              >> ");
-        clk = 0;
-        reset = 0;
-        #20ns reset = 1;
-        go = 0; 
-        #12ns go = 1;
-        end
-
-    always #10ns clk = ~clk; // 50 MHz
-
-    const char init1 [7:0] = '{ default:'{"Z", 0}, 0:'{"A", 1}, 1:'{"B",1}, 2:'{"C",1} };  
-    const char init2 [7:0] = '{ default:'{"", 0}, 0:'{"R", 1'b1} , 1:'{"B",1}, 2:'{"C",1}};
-
-    top uut1(
-        .clk     ( clk         ), 
-        .reset   ( reset       ), 
-        //.init    ( init1       ),
-        .tx      ( loopback1   ),
-        .rx      ( loopback2   ) );
-
-    top uut2(
-        .clk     ( clk         ), 
-        .reset   ( reset       ), 
-        //.init    ( init2       ), 
-        .tx      ( loopback2   ),
-        .rx      ( loopback1   ) );
-
-    endmodule
+//module top_tb( ); // no signals -- tb
+//
+//    logic clk, reset, go;
+//    logic loopback1;
+//    logic loopback2;
+//
+//    initial begin
+//        $display(       " <<              >> ");
+//        $display(       " <<              >> ");
+//        $display(       " <<              >> ");
+//        $display(       " <<              >> ");
+//        $display(       " <<              >> ");
+//        $display(       " << Sim Starting >> ");
+//        $display(       " <<              >> ");
+//        $display(       " <<              >> ");
+//        $display(       " <<              >> ");
+//        $display(       " <<              >> ");
+//        clk = 0;
+//        reset = 0;
+//        #20ns reset = 1;
+//        go = 0; 
+//        #12ns go = 1;
+//        end
+//
+//    always #10ns clk = ~clk; // 50 MHz
+//
+//    const char init1 [7:0] = '{ default:'{"Z", 0}, 0:'{"A", 1}, 1:'{"B",1}, 2:'{"C",1} };  
+//    const char init2 [7:0] = '{ default:'{"", 0}, 0:'{"R", 1'b1} , 1:'{"B",1}, 2:'{"C",1}};
+//
+//    top uut1(
+//        .clk     ( clk         ), 
+//        .reset   ( reset       ), 
+//        //.init    ( init1       ),
+//        .tx      ( loopback1   ),
+//        .rx      ( loopback2   ) );
+//
+//    top uut2(
+//        .clk     ( clk         ), 
+//        .reset   ( reset       ), 
+//        //.init    ( init2       ), 
+//        .tx      ( loopback2   ),
+//        .rx      ( loopback1   ) );
+//
+//    endmodule
  
       
       
